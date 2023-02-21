@@ -1,5 +1,5 @@
-import { within, userEvent } from '@storybook/testing-library'
-
+import { within, userEvent } from '@storybook/testing-library';
+import { LoginForm } from './LoginForm';
 
 const Template = (args) => <LoginForm {...args} />;
 
@@ -19,12 +19,12 @@ FilledForm.play = async ({ canvasElement }) => {
   await userEvent.type(canvas.getByTestId('password'), 'a-random-password');
 
   // See https://storybook.js.org/docs/react/essentials/actions#automatically-matching-args to learn how to setup logging in the Actions panel
-//   await userEvent.click(canvas.getByRole('button'));
+  //   await userEvent.click(canvas.getByRole('button'));
 
-//   // 👇 Assert DOM structure
-//   await expect(
-//     canvas.getByText(
-//       'Everything is perfect. Your account is ready and we should probably get you started!'
-//     )
-//   ).toBeInTheDocument();
+  //   // 👇 Assert DOM structure
+  //   await expect(
+  //     canvas.getByText(
+  //       'Everything is perfect. Your account is ready and we should probably get you started!'
+  //     )
+  //   ).toBeInTheDocument();
 };
